@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #ff0080, #ffcc00);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app {
+  background: white;
+  width: 90%;
+  max-width: 420px;
+  border-radius: 20px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 1.15rem;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 0.95rem;
+}
+
+.screen {
+  display: none;
+  animation: fade 0.35s ease;
+}
+
+.screen.active {
+  display: block;
+}
+
+@keyframes fade {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Botões */
+.btn {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 14px;
+  border-radius: 30px;
+  border: none;
+  background: #ff0080;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.1s ease, background 0.2s;
+}
+
+.btn:hover {
+  background: #e60073;
+}
+
+.btn:active {
+  transform: scale(0.96);
+}
+
+.option {
+  background: #f2f2f2;
+  color: #333;
+}
+
+.small {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 15px;
+}
+
+.insta {
+  font-size: 1.2rem;
+  margin: 15px 0;
+  color: #ff0080;
+  font-weight: bold;
+}
+
+/* Cards dos pesquisadores */
+.researchers {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.card {
+  width: 30%;
+  background: #f2f2f2;
+  border-radius: 15px;
+  padding: 8px;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.2s;
+}
+
+.card:hover {
+  background: #ffe0ef;
+}
+
+.card:active {
+  transform: scale(0.95);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.card span {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}

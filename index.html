@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Pesquisa Nacional</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- TELA 1 -->
+  <div class="screen active" id="screen1">
+    <h1>Pesquisa Nacional do Carnaval 🎉</h1>
+    <h2>Escolha seu pesquisador:</h2>
+
+    <div class="researchers">
+      <div class="card" onclick="chooseResearcher('pesquisador1')">
+        <img src="img/pesquisador1.jpg" alt="Pesquisador 1">
+        <span>Pesquisador 1</span>
+      </div>
+
+      <div class="card" onclick="chooseResearcher('pesquisador2')">
+        <img src="img/pesquisador2.jpg" alt="Pesquisador 2">
+        <span>Pesquisador 2</span>
+      </div>
+
+      <div class="card" onclick="chooseResearcher('pesquisador3')">
+        <img src="img/pesquisador3.jpg" alt="Pesquisador 3">
+        <span>Pesquisador 3</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- TELA 2 -->
+  <div class="screen" id="screen2">
+    <h2>Como foi a abordagem do pesquisador?</h2>
+
+    <button class="btn option" onclick="nextScreen(3)">Educado</button>
+    <button class="btn option" onclick="nextScreen(3)">Educado e simpático</button>
+  </div>
+
+  <!-- TELA 3 -->
+  <div class="screen" id="screen3">
+    <h2>Essa pesquisa merece continuidade?</h2>
+
+    <button class="btn option" onclick="nextScreen(4)">Merece um estudo prático</button>
+    <button class="btn option" onclick="nextScreen(4)">Merece um estudo aprofundado 👀</button>
+  </div>
+
+  <!-- TELA 4 -->
+  <div class="screen" id="screen4">
+    <h2>Para fins científicos: esse pesquisador merece um beijo?</h2>
+
+    <button class="btn option" onclick="nextScreen(5)">Sim, pela ciência 😌</button>
+    <button class="btn option" onclick="nextScreen(5)">Sim, para validar os dados 😏</button>
+  </div>
+
+  <!-- TELA 5 -->
+  <div class="screen" id="screen5">
+    <h2>Obrigada por participar da Pesquisa Nacional do Carnaval 🎉</h2>
+    <p>📊 Dados coletados com sucesso.</p>
+
+    <p>Siga o pesquisador no Instagram:</p>
+    <div class="insta" id="instaHandle">@pesquisador</div>
+
+    <a id="instaLink" href="#" target="_blank">
+      <button class="btn">Abrir Instagram</button>
+    </a>
+
+    <p class="small">Resultados preliminares indicam alto índice de aprovação 😏</p>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
