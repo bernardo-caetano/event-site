@@ -23,6 +23,34 @@ body {
   overflow: hidden;
 }
 
+/* PROGRESSO */
+.progress-container {
+  margin-bottom: 15px;
+  display: none; /* ESCONDE POR PADRÃO */
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background: #eee;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background: #ff0080;
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  font-size: 0.75rem;
+  color: #555;
+  margin-top: 5px;
+}
+
+/* TEXTOS */
 h1 {
   font-size: 1.4rem;
   margin-bottom: 10px;
@@ -37,6 +65,13 @@ p {
   font-size: 0.95rem;
 }
 
+.small {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 15px;
+}
+
+/* TELAS */
 .screen {
   display: none;
   animation: fade 0.35s ease;
@@ -51,7 +86,7 @@ p {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Botões */
+/* BOTÕES */
 .btn {
   display: block;
   width: 100%;
@@ -79,12 +114,7 @@ p {
   color: #333;
 }
 
-.small {
-  font-size: 0.8rem;
-  color: #666;
-  margin-top: 15px;
-}
-
+/* INSTAGRAM */
 .insta {
   font-size: 1.2rem;
   margin: 15px 0;
@@ -92,7 +122,7 @@ p {
   font-weight: bold;
 }
 
-/* Cards dos pesquisadores */
+/* PESQUISADORES */
 .researchers {
   display: flex;
   justify-content: space-between;

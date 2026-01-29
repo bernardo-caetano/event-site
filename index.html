@@ -10,6 +10,14 @@
 
 <div class="app">
 
+  <!-- BARRA DE PROGRESSO -->
+  <div class="progress-container">
+    <div class="progress-bar">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+    <div class="progress-text" id="progressText">Pergunta 1 de 3</div>
+  </div>
+
   <!-- TELA 1 -->
   <div class="screen active" id="screen1">
     <h1>Pesquisa Nacional do Carnaval 🎉</h1>
@@ -36,7 +44,6 @@
   <!-- TELA 2 -->
   <div class="screen" id="screen2">
     <h2>Como foi a abordagem do pesquisador?</h2>
-
     <button class="btn option" onclick="nextScreen(3)">Educado</button>
     <button class="btn option" onclick="nextScreen(3)">Educado e simpático</button>
   </div>
@@ -44,7 +51,6 @@
   <!-- TELA 3 -->
   <div class="screen" id="screen3">
     <h2>Essa pesquisa merece continuidade?</h2>
-
     <button class="btn option" onclick="nextScreen(4)">Merece um estudo prático</button>
     <button class="btn option" onclick="nextScreen(4)">Merece um estudo aprofundado 👀</button>
   </div>
@@ -52,7 +58,6 @@
   <!-- TELA 4 -->
   <div class="screen" id="screen4">
     <h2>Para fins científicos: esse pesquisador merece um beijo?</h2>
-
     <button class="btn option" onclick="nextScreen(5)">Sim, pela ciência 😌</button>
     <button class="btn option" onclick="nextScreen(5)">Sim, para validar os dados 😏</button>
   </div>

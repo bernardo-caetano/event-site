@@ -24,11 +24,33 @@ function nextScreen(n) {
 
   document.getElementById('screen' + n).classList.add('active');
 
+  updateProgress(n);
+
   if (n === 5) {
     document.getElementById('instaHandle').innerText =
       instagramNameMap[selectedResearcher];
 
     document.getElementById('instaLink').href =
       instagramMap[selectedResearcher];
+  }
+}
+
+function updateProgress(screenNumber) {
+  const progressContainer = document.querySelector('.progress-container');
+  const progressFill = document.getElementById('progressFill');
+  const progressText = document.getElementById('progressText');
+
+  // só aparece nas telas 2, 3 e 4
+  if (screenNumber >= 2 && screenNumber <= 4) {
+    progressContainer.style.display = 'block';
+
+    const questionIndex = screenNumber - 1; // 2→1, 3→2, 4→3
+    const totalQuestions = 3;
+    const percent = (questionIndex / totalQuestions) * 100;
+
+    progressFill.style.width = percent + '%';
+    progressText.innerText = `Pergunta ${questionIndex} de ${totalQuestions}`;
+  } else {
+    progressContainer.style.display = 'none';
   }
 }
