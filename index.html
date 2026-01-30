@@ -2,21 +2,13 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Pesquisa Nacional</title>
+  <title>Avaliação do Pesquisador</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
+  <link id="themeStylesheet" rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <div class="app">
-
-  <!-- BARRA DE PROGRESSO -->
-  <div class="progress-container">
-    <div class="progress-bar">
-      <div class="progress-fill" id="progressFill"></div>
-    </div>
-    <div class="progress-text" id="progressText">Pergunta 1 de 3</div>
-  </div>
 
   <!-- TELA 1 -->
   <div class="screen active" id="screen1">
@@ -43,38 +35,24 @@
 
   <!-- TELA 2 -->
   <div class="screen" id="screen2">
-    <h2>Como foi a abordagem do pesquisador?</h2>
-    <button class="btn option" onclick="nextScreen(3)">Educado</button>
-    <button class="btn option" onclick="nextScreen(3)">Educado e simpático</button>
-  </div>
+    <h2>Avalie o pesquisador</h2>
 
-  <!-- TELA 3 -->
-  <div class="screen" id="screen3">
-    <h2>Essa pesquisa merece continuidade?</h2>
-    <button class="btn option" onclick="nextScreen(4)">Merece um estudo prático</button>
-    <button class="btn option" onclick="nextScreen(4)">Merece um estudo aprofundado 👀</button>
-  </div>
+    <div class="stars" id="stars">
+      <span onclick="selectStar(1)">★</span>
+      <span onclick="selectStar(2)">★</span>
+      <span onclick="selectStar(3)">★</span>
+      <span onclick="selectStar(4)">★</span>
+      <span onclick="selectStar(5)">★</span>
+    </div>
 
-  <!-- TELA 4 -->
-  <div class="screen" id="screen4">
-    <h2>Para fins científicos: esse pesquisador merece um beijo?</h2>
-    <button class="btn option" onclick="nextScreen(5)">Sim, pela ciência 😌</button>
-    <button class="btn option" onclick="nextScreen(5)">Sim, para validar os dados 😏</button>
-  </div>
-
-  <!-- TELA 5 -->
-  <div class="screen" id="screen5">
-    <h2>Obrigada por participar da Pesquisa Nacional do Carnaval 🎉</h2>
-    <p>📊 Dados coletados com sucesso.</p>
-
-    <p>Siga o pesquisador no Instagram:</p>
+    <p>Deixe sugestões, críticas e comentários 📝:</p>
     <div class="insta" id="instaHandle">@pesquisador</div>
 
     <a id="instaLink" href="#" target="_blank">
       <button class="btn">Abrir Instagram</button>
     </a>
 
-    <p class="small">Resultados preliminares indicam alto índice de aprovação 😏</p>
+    <button class="btn secondary" onclick="resetApp()">Avaliar outro pesquisador</button>
   </div>
 
 </div>

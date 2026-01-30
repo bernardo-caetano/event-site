@@ -14,43 +14,27 @@ const instagramNameMap = {
 
 function chooseResearcher(id) {
   selectedResearcher = id;
-  nextScreen(2);
+
+  document.getElementById('screen1').classList.remove('active');
+  document.getElementById('screen2').classList.add('active');
+
+  document.getElementById('instaHandle').innerText =
+    instagramNameMap[selectedResearcher];
+  document.getElementById('instaLink').href =
+    instagramMap[selectedResearcher];
 }
 
-function nextScreen(n) {
-  document.querySelectorAll('.screen').forEach(screen => {
-    screen.classList.remove('active');
+function selectStar(n) {
+  const stars = document.querySelectorAll('.stars span');
+  stars.forEach((star, index) => {
+    star.classList.toggle('active', index < n);
   });
-
-  document.getElementById('screen' + n).classList.add('active');
-
-  updateProgress(n);
-
-  if (n === 5) {
-    document.getElementById('instaHandle').innerText =
-      instagramNameMap[selectedResearcher];
-
-    document.getElementById('instaLink').href =
-      instagramMap[selectedResearcher];
-  }
 }
 
-function updateProgress(screenNumber) {
-  const progressContainer = document.querySelector('.progress-container');
-  const progressFill = document.getElementById('progressFill');
-  const progressText = document.getElementById('progressText');
+function resetApp() {
+  document.getElementById('screen2').classList.remove('active');
+  document.getElementById('screen1').classList.add('active');
 
-  // só aparece nas telas 2, 3 e 4
-  if (screenNumber >= 2 && screenNumber <= 4) {
-    progressContainer.style.display = 'block';
-
-    const questionIndex = screenNumber - 1; // 2→1, 3→2, 4→3
-    const totalQuestions = 3;
-    const percent = (questionIndex / totalQuestions) * 100;
-
-    progressFill.style.width = percent + '%';
-    progressText.innerText = `Pergunta ${questionIndex} de ${totalQuestions}`;
-  } else {
-    progressContainer.style.display = 'none';
-  }
+  const stars = document.querySelectorAll('.stars span');
+  stars.forEach(star => star.classList.remove('active'));
 }
