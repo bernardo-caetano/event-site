@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Avaliação do Pesquisador</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link id="themeStylesheet" rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -17,27 +17,67 @@
 
     <div class="researchers">
       <div class="card" onclick="chooseResearcher('pesquisador1')">
-        <img src="img/pesquisador1.jpg" alt="Pesquisador 1">
+        <img src="img/pesquisador1.jpg">
         <span>Bernardo</span>
       </div>
 
       <div class="card" onclick="chooseResearcher('pesquisador2')">
-        <img src="img/pesquisador2.jpg" alt="Pesquisador 2">
+        <img src="img/pesquisador2.jpg">
         <span>Bruno</span>
       </div>
 
       <div class="card" onclick="chooseResearcher('pesquisador3')">
-        <img src="img/pesquisador3.jpg" alt="Pesquisador 3">
+        <img src="img/pesquisador3.jpg">
         <span>João</span>
+      </div>
+
+      <div class="card" onclick="chooseResearcher('pesquisador4')">
+        <img src="img/pesquisador4.jpg">
+        <span>Kotait</span>
       </div>
     </div>
   </div>
 
+  <!-- CONTADOR -->
+  <div id="counter" class="counter"></div>
+
+<!-- BARRA DE PROGRESSO -->
+<div id="progressContainer" class="progress-container">
+  <div id="progressBar" class="progress-bar"></div>
+</div>
+
+
   <!-- TELA 2 -->
   <div class="screen" id="screen2">
-    <h2>Avalie o pesquisador</h2>
+    <h2>Como foi a abordagem do pesquisador?</h2>
+    <button class="btn option" onclick="selectOption(this, 3)">Educado</button>
+    <button class="btn option" onclick="selectOption(this, 3)">Simpático</button>
+    <button class="btn option" onclick="selectOption(this, 3)">Educado e simpático</button>
+  </div>
 
-    <div class="stars" id="stars">
+  <!-- TELA 3 -->
+  <div class="screen" id="screen3">
+    <h2>O pesquisador estava apto para realizar as perguntas?</h2>
+    <button class="btn option" onclick="selectOption(this, 4)">Muito apto</button>
+    <button class="btn option" onclick="selectOption(this, 4)">Mais prá lá do que pra cá</button>
+    <button class="btn option" onclick="selectOption(this, 4)">Estou bêbada e não reparei 🍻</button>
+  </div>
+
+  <!-- TELA 4 -->
+  <div class="screen" id="screen4">
+    <h2>Esse pesquisador merece um beijo ao final do trabalho?</h2>
+    <button class="btn option" onclick="selectOption(this, 5)">Sim</button>
+    <button class="btn option" onclick="selectOption(this, 5)">Com certeza</button>
+    <button class="btn option" onclick="selectOption(this, 5)">Fica pra próxima</button>
+  </div>
+
+  <!-- TELA FINAL -->
+  <div class="screen" id="screen5">
+    <h2>Avalie o pesquisador</h2>
+    <div id="finalCard" class="final-card"></div>
+
+
+    <div class="stars">
       <span onclick="selectStar(1)">★</span>
       <span onclick="selectStar(2)">★</span>
       <span onclick="selectStar(3)">★</span>
@@ -45,12 +85,13 @@
       <span onclick="selectStar(5)">★</span>
     </div>
 
-    <p>Deixe sugestões, críticas e comentários 📝:</p>
     <div class="insta" id="instaHandle">@pesquisador</div>
 
-    <a id="instaLink" href="#" target="_blank">
-      <button class="btn">Abrir Instagram</button>
+    <a id="instaLink" href="#" target="_blank" onclick="resetApp()">
+      <button class="btn selected">Abrir Instagram</button>
     </a>
+
+
 
     <button class="btn secondary" onclick="resetApp()">Avaliar outro pesquisador</button>
   </div>
